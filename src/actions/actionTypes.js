@@ -1,0 +1,2 @@
+export const CHANGE_VIDEO = 'CHANGE_VIDEO';
+export const CHANGE_VIDEO_LIST = 'CHANGE_VIDEO_LIST';
