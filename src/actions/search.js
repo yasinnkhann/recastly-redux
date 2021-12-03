@@ -12,29 +12,9 @@ var handleVideoSearch = (q) => {
     searchYouTube({key: YOUTUBE_API_KEY, query: q, max: 5}, (data) => {
       dispatch(videoListAction(data));
       dispatch(currentVideoAction(data[0]));
+      console.log('DATA: ', data);
     })
   }
 };
 
 export default handleVideoSearch;
-
-// var searchYouTube = ({key, query, max = 5}, callback) => {
-//   $.get('https://www.googleapis.com/youtube/v3/search', {
-//     part: 'snippet',
-//     key: key,
-//     q: query,
-//     maxResults: max,
-//     type: 'video',
-//     videoEmbeddable: 'true'
-//   })
-//     .done(({items}) => {
-//       if (callback) {
-//         callback(items);
-//       }
-//     })
-//     .fail(({responseJSON}) => {
-//       responseJSON.error.errors.forEach((err) =>
-//         console.error(err)
-//       );
-//     });
-// }
