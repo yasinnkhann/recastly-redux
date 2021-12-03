@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import VideoListEntry from './VideoListEntry.js';
 
-var VideoList = ({videos, handleVideoListEntryTitleClick}) => (
+const VideoList = ({videos, handleVideoListEntryTitleClick}) => (
   <div className="video-list">
     {
       videos.map(video => (

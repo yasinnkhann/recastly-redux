@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-var VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
+const VideoListEntry = ({video, handleVideoListEntryTitleClick}) => (
   <div className="video-list-entry">
     <div className="media-left media-middle">
       <img className="media-object" src={video.snippet.thumbnails.default.url} alt="" />

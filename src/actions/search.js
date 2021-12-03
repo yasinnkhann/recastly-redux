@@ -9,7 +9,7 @@ import currentVideoAction from './currentVideo.js';
 var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   return dispatch => {
-    searchYouTube({key: YOUTUBE_API_KEY, query: q, max: 5}, (data) => {
+    searchYouTube({ key: YOUTUBE_API_KEY, query: q }, (data) => {
       dispatch(videoListAction(data));
       dispatch(currentVideoAction(data[0]));
       console.log('DATA: ', data);
